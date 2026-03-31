@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart City Digital Infrastructure</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <h1>🏙 Data-Intelligent Digital Infrastructure</h1>
+    <p>Smart City Operations | IoT | AI | Real-Time Decision Making</p>
+</header>
+
+<!-- NAVBAR -->
+<nav>
+    <a href="#about">About</a>
+    <a href="#objectives">Objectives</a>
+    <a href="#systems">Systems</a>
+    <a href="#dashboard">Dashboard</a>
+    <a href="#features">Features</a>
+    <a href="#citizen">Citizen</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2>About Project</h2>
+    <p>
+        This project builds a data-driven digital infrastructure that integrates 
+        traffic, water, power, and waste management systems into a unified intelligent platform 
+        for smart city operations.
+    </p>
+</section>
+
+<!-- OBJECTIVES -->
+<section id="objectives">
+    <h2>🎯 Project Objectives</h2>
+
+    <div class="card">Integration of smart systems</div>
+    <div class="card">Real-time data collection</div>
+    <div class="card">Efficient service delivery</div>
+    <div class="card">IoT + AI implementation</div>
+    <div class="card">Citizen engagement</div>
+</section>
+
+<!-- SYSTEMS -->
+<section id="systems">
+    <h2>🌐 Smart City Systems</h2>
+
+    <div class="card">🚗 Traffic Management</div>
+    <div class="card">💧 Water Management</div>
+    <div class="card">⚡ Power Monitoring</div>
+    <div class="card">🗑 Waste Management</div>
+</section>
+
+<!-- DASHBOARD -->
+<section id="dashboard">
+    <h2>📊 Real-Time Dashboard</h2>
+
+    <p id="traffic"></p>
+    <p id="water"></p>
+    <p id="power"></p>
+    <p id="waste"></p>
+
+    <h3>🧠 AI Prediction</h3>
+    <p id="prediction"></p>
+</section>
+
+<!-- FEATURES -->
+<section id="features">
+    <h2>Smart Features</h2>
+
+    <div class="card">
+        <h3>📡 IoT Integration</h3>
+        <p>Real-time data from sensors and devices.</p>
+    </div>
+
+    <div class="card">
+        <h3>🧠 AI Analytics</h3>
+        <p>Predict traffic, energy usage, and services.</p>
+    </div>
+
+    <div class="card">
+        <h3>⚙ Automation</h3>
+        <p>Improves service delivery and reduces delays.</p>
+    </div>
+</section>
+
+<!-- CITIZEN -->
+<section id="citizen">
+    <h2>👥 Citizen Engagement</h2>
+
+    <p>Provide feedback and interact with smart city services.</p>
+
+    <textarea id="feedbackText" placeholder="Enter your feedback"></textarea><br><br>
+    <button onclick="submitFeedback()">Submit Feedback</button>
+
+    <p id="output"></p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Email: smartcity@gmail.com</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Smart City Project</p>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+
+/* 📡 IoT Simulation */
+setInterval(() => {
+
+    let traffic = Math.floor(Math.random()*100);
+    let water = Math.floor(Math.random()*500);
+    let power = Math.floor(Math.random()*1000);
+    let waste = Math.floor(Math.random()*50);
+
+    document.getElementById("traffic").innerHTML = "🚗 Traffic: " + traffic;
+    document.getElementById("water").innerHTML = "💧 Water: " + water + " L";
+    document.getElementById("power").innerHTML = "⚡ Power: " + power + " kW";
+    document.getElementById("waste").innerHTML = "🗑 Waste: " + waste + " kg";
+
+}, 2000);
+
+/* 🧠 AI Prediction */
+setInterval(() => {
+    let msg = [
+        "🚨 High Traffic Detected",
+        "✅ Power Usage Normal",
+        "⚠️ Water Shortage Alert"
+    ];
+
+    document.getElementById("prediction").innerHTML =
+        msg[Math.floor(Math.random()*msg.length)];
+
+}, 3000);
+
+/* 👥 Feedback */
+function submitFeedback() {
+    let text = document.getElementById("feedbackText").value;
+
+    if(text.trim() === ""){
+        alert("⚠️ Please enter feedback");
+    } else {
+        document.getElementById("output").innerHTML =
+            "✅ Thank you! Your feedback: <br><b>" + text + "</b>";
+
+        console.log("Feedback:", text);
+    }
+}
+
+</script>
+
+</body>
+</html>

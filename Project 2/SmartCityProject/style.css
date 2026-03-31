@@ -1,0 +1,157 @@
+/* ===== GLOBAL ===== */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+
+    /* 🌆 Civil Infrastructure Background */
+    background: 
+        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+        url(https://images.unsplash.com/photo-1582540730843-f4418d96ccbe?q=80&w=1246&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+}
+
+/* ===== HEADER ===== */
+header {
+    background: rgba(10, 61, 98, 0.85);
+    backdrop-filter: blur(6px);
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+/* ===== NAVBAR ===== */
+nav {
+    background: rgba(30, 55, 153, 0.85);
+    backdrop-filter: blur(6px);
+    padding: 12px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    margin: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: yellow;
+}
+
+/* ===== SECTIONS ===== */
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* ===== CARDS ===== */
+.card {
+    background: rgba(255,255,255,0.92);
+    color: black;
+    padding: 20px;
+    margin: 15px;
+    display: inline-block;
+    width: 28%;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.05);
+}
+
+/* ===== DASHBOARD DATA ===== */
+#dashboard p {
+    font-size: 18px;
+    margin: 8px;
+    font-weight: bold;
+}
+
+#prediction {
+    font-size: 20px;
+    color: #ffdd57;
+    margin-top: 10px;
+}
+
+/* ===== BUTTON ===== */
+button {
+    padding: 12px 20px;
+    background: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #219150;
+    transform: scale(1.05);
+}
+
+/* ===== TEXTAREA ===== */
+textarea {
+    width: 60%;
+    height: 100px;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+}
+
+/* ===== FEEDBACK OUTPUT ===== */
+#output {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #00ffcc;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: rgba(10, 61, 98, 0.85);
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* ===== SCROLL SMOOTH ===== */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 768px) {
+
+    .card {
+        width: 90%;
+        display: block;
+        margin: 10px auto;
+    }
+
+    textarea {
+        width: 90%;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+}
